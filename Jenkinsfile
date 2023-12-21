@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'NAME=Taidinh'
                 sh 'echo ${NAME}. Current date and time is: $(date)'
-                sh 'node --version'
+                sh 'node --version '
             }
         }
     }
