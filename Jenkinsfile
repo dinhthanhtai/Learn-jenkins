@@ -1,11 +1,13 @@
 pipeline {
-    agent { docker { image 'node:20.10.0-alpine3.19' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'NAME=Taidinh'
-                sh 'echo ${NAME}. Current date and time is: $(date)'
-                sh 'node --version '
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
         }
     }
