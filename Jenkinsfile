@@ -1,12 +1,14 @@
 pipeline {
-    agent {
-        docker { image 'node:20-alpine3.18' }
-    }
+    agent any
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
                 sh 'docker --version'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'DKM Jenkins'
             }
         }
     }
